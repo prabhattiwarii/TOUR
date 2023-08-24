@@ -1,0 +1,26 @@
+.thank-you {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .thank-you__title {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .thank-you__message {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  .thank-you span i{
+    font-size: 4rem;
+    color: green;
+  }
+
+  .thank-you h1{
+    font-size: 3.6rem;
+    font-family: var(--subtitle-font-name);
+  }
