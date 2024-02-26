@@ -1,7 +1,7 @@
 const express = require('express');
+const cors = require('cors');
 const dotenv = require('dotenv');
 const mongoose = require('mongoose');
-const cors = require('cors');
 const cookieParser = require('cookie-parser');
 
 const tourRoute = require('./routes/tours.js');
@@ -16,9 +16,11 @@ dotenv.config();
 const app = express();
 const port = process.env.PORT || 8000;
 
+// Enable CORS
+app.use(cors());
+
 // Middleware
 app.use(express.json());
-app.use(cors());
 app.use(cookieParser());
 app.use('/api/v1/tours', tourRoute);
 app.use('/api/v1/users', userRoute);
