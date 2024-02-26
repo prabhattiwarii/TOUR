@@ -7,7 +7,7 @@ import Newsletter from '../shared/Newsletter.js'
 const SearchResultList = () => {
   const location = useLocation();
   const [data] = useState(location.state);
- 
+
 
   return (
     <>
@@ -16,19 +16,19 @@ const SearchResultList = () => {
         <Container>
           <Row>
             {
-              data.length ===0 ?Col(
+              data.length === 0 ? Col(
                 <h4 className="text-center">No Tour found</h4>
               ) : (
                 data?.map(tour => (
                   <Col lg='3' className='mb-4' key={tour._id}>
-                  <TourCard tour={tour}/> 
+                    <TourCard tour={tour} />
                   </Col>
-                  ))
+                ))
               )}
           </Row>
         </Container>
       </section>
-      <Newsletter/>
+      <Newsletter />
     </>
   );
 };
