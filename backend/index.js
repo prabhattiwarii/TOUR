@@ -1,16 +1,16 @@
-import express from 'express';
-import dotenv from 'dotenv';
-import mongoose from 'mongoose';
-import cors from 'cors';
-import cookieParser from 'cookie-parser';
+const express = require('express');
+const dotenv = require('dotenv');
+const mongoose = require('mongoose');
+const cors = require('cors');
+const cookieParser = require('cookie-parser');
 
-import tourRoute from './routes/tours.js';
-import userRoute from './routes/users.js';
-import authRoute from './routes/auth.js';
-import reviewRoute from './routes/reviews.js';
-import bookingRoute from './routes/bookings.js';
+const tourRoute = require('./routes/tours.js');
+const userRoute = require('./routes/users.js');
+const authRoute = require('./routes/auth.js');
+const reviewRoute = require('./routes/reviews.js');
+const bookingRoute = require('./routes/bookings.js');
 
-import { db } from './database/db.js';
+const { db } = require('./database/db.js');
 
 dotenv.config();
 const app = express();
